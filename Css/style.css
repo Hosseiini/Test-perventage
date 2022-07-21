@@ -7,12 +7,30 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  height: 100%;
 }
 
 body {
   font-family: sans-serif;
   color: #eee;
-  background-color: #222;
+  margin: 0;
+}
+
+h1 {
+  background-image: linear-gradient(
+    -50deg,
+    rgb(208, 120, 157) 32%,
+    rgba(12, 111, 225, 0.77) 100%
+  );
+  font-size: 27px;
+  border-radius: 5rem;
+  text-align: center;
+  position: absolute;
+  width: 50%;
+  bottom: 50%;
+  left: 50%;
+  padding: 0.5rem;
+  transform: translate(-50%, -50%);
 }
 
 header {
@@ -29,6 +47,36 @@ main {
   margin: 50px;
 }
 
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #800020 50%, rgb(63, 94, 251) 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
 .left {
   width: 52rem;
   display: flex;
@@ -36,19 +84,13 @@ main {
   align-items: center;
 }
 
-h1 {
-  font-size: 30px;
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  bottom: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .guess {
-  background-color: #383333;
-  border: 4px solid #49434388;
+  background-image: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 15%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  border: 4px solid rgba(148, 187, 233, 1);
   border-radius: 45px;
   font-family: inherit;
   color: inherit;
@@ -58,13 +100,13 @@ h1 {
   height: 30rem;
   text-align: center;
   display: block;
-  margin-bottom: 0rem;
+  margin-bottom: 4.5rem;
 }
 
 .check {
   position: relative;
   border: none;
-  bottom: 150px;
+  bottom: 18.5rem;
   text-align: center;
   background-color: #6d1818;
   color: #000000;
@@ -78,7 +120,7 @@ h1 {
 .reset {
   position: relative;
   border: none;
-  bottom: 194px;
+  bottom: 23rem;
   text-align: center;
   background-color: #807c7c;
   color: #000000;
@@ -103,7 +145,7 @@ h1 {
   width: 3rem;
   height: 3rem;
   position: relative;
-  bottom: 235px;
+  bottom: 28rem;
   left: 120px;
   margin: -5px;
   text-align: center;
@@ -111,11 +153,11 @@ h1 {
 }
 
 .correct {
-  color: #60b347;
+  color: #006400;
 }
 
 .wrong {
-  color: red;
+  color: #b31b1b;
 }
 
 .correctText,
@@ -123,33 +165,32 @@ h1 {
 .totalText,
 .percentage {
   position: relative;
-  bottom: 218px;
+  bottom: 26.5rem;
   right: 55px;
 }
 
 .correctText {
   font-size: 15px;
-  color: #60b347;
+  color: #006400;
 }
 
 .wrongText {
   font-size: 15px;
-  color: red;
+  color: #b31b1b;
 }
 
 .totalText {
   font-size: 15px;
-
 }
 
 .percentage {
   font-size: 15px;
-  color: #77b4ed;
+  color: #0066b2;
 }
 
 .percent {
   inline-size: 150px;
   margin: 5px;
-  color: #77b4ed;
+  color: #0066b2;
   font-size: 17px;
 }
