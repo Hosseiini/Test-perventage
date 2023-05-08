@@ -34,6 +34,8 @@ document.querySelector(".check").addEventListener("click", function percentage()
 
     } else if (wrongNumber > totalNumber) {
         document.querySelector(".percent").innerHTML = "The wrong value is larger"
+    }else if (correctNumber + wrongNumber > totalNumber{
+              document.querySelector(".percent").innerHTML = "error"
     }
 });
 
